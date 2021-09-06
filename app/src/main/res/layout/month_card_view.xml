@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    card_view:cardBackgroundColor="@color/blue"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="3dp"
+    card_view:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/monthCardNumberIndex0"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/months"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/number1" />
+
+        <ImageView
+            android:id="@+id/monthCardNumberIndex1"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/months"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/monthCardNumberIndex0"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/number2" />
+
+        <TextView
+            android:id="@+id/monthCardYelamText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/bid_amount"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            card_view:layout_constraintStart_toEndOf="@id/monthCardNumberIndex1"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/monthCardToPayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/to_pay"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            card_view:layout_constraintStart_toEndOf="@id/monthCardNumberIndex1"
+            card_view:layout_constraintTop_toBottomOf="@id/monthCardYelam" />
+
+        <TextView
+            android:id="@+id/monthCardPendingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/pending"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@id/monthCardNumberIndex1"
+            card_view:layout_constraintTop_toBottomOf="@id/monthCardToPay" />
+
+        <TextView
+            android:id="@+id/monthCardYelam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/sample_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            card_view:layout_constraintStart_toEndOf="@+id/monthCardYelamText"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/monthCardToPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/sample_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            card_view:layout_constraintStart_toEndOf="@+id/monthCardYelamText"
+            card_view:layout_constraintTop_toBottomOf="@id/monthCardYelam" />
+
+        <TextView
+            android:id="@+id/monthCardPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/sample_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/monthCardYelamText"
+            card_view:layout_constraintTop_toBottomOf="@id/monthCardToPay" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/monthCardEditButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/pencil"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/edit_month"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+

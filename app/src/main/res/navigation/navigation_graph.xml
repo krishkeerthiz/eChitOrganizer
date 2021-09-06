@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yourapp.seetuorganizer.ui.home.HomeFragment"
+        android:label="@string/chit"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_seetuFragment"
+            app:destination="@id/seetuFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_allUsersFragment"
+            app:destination="@id/allUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seetuFragment"
+        android:name="com.yourapp.seetuorganizer.ui.seetu.SeetuFragment"
+        android:label="@string/users"
+        tools:layout="@layout/fragment_seetu" >
+        <action
+            android:id="@+id/action_seetuFragment_to_monthsFragment"
+            app:destination="@id/monthsFragment" />
+        <argument
+            android:name="organizerPhoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="seetu"
+            app:argType="com.yourapp.seetuorganizer.model.SeetuModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.yourapp.seetuorganizer.ui.info.InfoFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="organizerPhoneNumber"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/monthsFragment"
+        android:name="com.yourapp.seetuorganizer.ui.months.MonthsFragment"
+        android:label="@string/months" >
+        <argument
+            android:name="organizerPhoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="user"
+            app:argType="com.yourapp.seetuorganizer.model.UserModel" />
+        <argument
+            android:name="seetuName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/allUsersFragment"
+        android:name="com.yourapp.seetuorganizer.ui.allUsers.AllUsersFragment"
+        android:label="@string/all_users"
+        tools:layout="@layout/fragment_all_users" >
+        <argument
+            android:name="organizerPhoneNumber"
+            app:argType="string" />
+    </fragment>
+</navigation>

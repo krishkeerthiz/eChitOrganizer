@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "370029393416",
+    "project_id": "seetu-59aa4",
+    "storage_bucket": "seetu-59aa4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370029393416:android:3399f31fec24ced83703bd",
+        "android_client_info": {
+          "package_name": "com.yourapp.seetuorganizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370029393416-j7bo0lbl2i4tvhs0ute25mjsvr3oha37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yourapp.seetuorganizer",
+            "certificate_hash": "628ab3c6ea47cf62adae4a6336e7c0e081700d7d"
+          }
+        },
+        {
+          "client_id": "370029393416-l1e47uv811v5v8e58usipmc3vlln62do.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA-JrlIMs_hcOBcBd1kdt9gPhbdgf-_2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370029393416-l1e47uv811v5v8e58usipmc3vlln62do.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
